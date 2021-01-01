@@ -16,11 +16,11 @@ def fileNames(filepath):
             print(" "*count*2,"\033[1;37;40m |-> "+f"\033[1;37;40m{files}")
         if os.path.isdir(os.path.join(filepath, files)):
             print(" "*count*2,"\033[1;37;40m |-"+f"\033[1;32;40m{files}")
-            count=count+1
+            count+=1
             fileNames(os.path.join(filepath, files))
         else:
             File.append(files)
-    count=count-1
+    count-=1
 
 for files in sorted(os.listdir()):
     newPath = os.path.join(path, files)
